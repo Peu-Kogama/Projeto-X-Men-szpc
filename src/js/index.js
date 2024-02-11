@@ -2,7 +2,7 @@
 // OBJETIVO 1 -  quando passar o mouse em cima do personagem na listagem, devemos selecionaá-lo
 // passo 1 - pegar os personagens no JS para poder verificar quando o usuário passar o mouse em cima de um deles.
 
-const personagens = document.querySelectorAll('.personagem')
+const personagens = document.querySelectorAll('.personagem');
 
 
 //passo 2 - adicionar a classe selecionada do personagem que o usuário passa o cursor do mouse
@@ -24,8 +24,8 @@ personagens.forEach(personagem => {
         //passo 4 - alterar a descrição do personagem
 
         alterarDescricaoPersonagem(personagem);
-    })
-})
+    });
+});
 
 function verificaAlteracaoNaClassePersonagem(personagem) {
     const personagemSelecionado = document.querySelector('.selecionado');
@@ -33,7 +33,7 @@ function verificaAlteracaoNaClassePersonagem(personagem) {
     personagemSelecionado.classList.remove('selecionado');
 
     personagem.classList.add('selecionado');
-}
+};
 
 function alterarImagemPersonagem(personagem) {
     const imagemPersonagemGrande = document.querySelector('.personagem-grande');
@@ -46,14 +46,14 @@ function alterarImagemPersonagem(personagem) {
     if (window.innerWidth < 450) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-}
+};
 
 function alterarDescricaoPersonagem(personagem) {
     const descricaoPersonagem = document.getElementById('descricao-personagem');
     descricaoPersonagem.innerText = personagem.getAttribute('data-description');
-}
+};
 
 function alterarNomePersonagemSelecionado(personagem) {
     const nomePersonagem = document.getElementById('nome-personagem');
     nomePersonagem.innerText = personagem.getAttribute('data-name');
-}
+};
